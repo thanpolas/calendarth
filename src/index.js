@@ -2,4 +2,14 @@
  * @fileOverview Library Bootstrap.
  */
 
-module.exports = require('./calendarth');
+var Calendarth = require('./calendarth');
+
+/**
+ * The exported API, return a new instance of Calendarth.
+ *
+ * @param {Object} options Options.
+ * @return {Calendarth} A new instance of Calendarth.
+ */
+module.exports = function(options) {
+  return new Calendarth(options);
+};

@@ -14,7 +14,7 @@ var Item = require('./item');
 
 /**
  * The base class.
- * 
+ *
  * @constructor
  */
 var Calendarth = module.exports = function(apiKey, calendarId) {
