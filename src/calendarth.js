@@ -25,6 +25,7 @@ var Calendarth = module.exports = function(options) {
   this.options = options || {};
   this.apiKey = this.options.apiKey || null;
   this.calendarId = this.options.calendarId || null;
+  this.maxResults = this.options.maxResults || 20;
 };
 
 /**
@@ -42,6 +43,7 @@ Calendarth.prototype.fetch = function(cb) {
   calendarUrl += '&orderBy=startTime';
   calendarUrl += '&singleEvents=true';
   calendarUrl += '&timeMin=' + dt.toISOString();
+  calendarUrl += '&maxResults=' + this.maxResults;
   $.ajax({
     type: 'GET',
     url: calendarUrl,

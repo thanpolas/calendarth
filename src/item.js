@@ -4,12 +4,14 @@
 
 /**
  * A wrapper for the Google Calendar v3 Object.
- * 
+ *
  * @param {Object} calendarObj The Google Calendar v3 Object.
  * @constructor
  */
 var Item = module.exports = function(calendarObj) {
-  this.calendarObj = calendarObj;
+  // stub return with same object for now...
+  return calendarObj;
+  // this.calendarObj = calendarObj;
 };
 
 /**
