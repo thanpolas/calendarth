@@ -4,7 +4,13 @@
   "main": "./build/calendarth.min.js",
   "ignore": [
     "test/",
-    "temp/"
+    "temp/",
+    "src",
+    ".editorconfig",
+    ".jshintrc",
+    "Gruntfile.js",
+    "package.json",
+    "README.md"
   ],
   "dependencies": {},
   "devDependencies": {
