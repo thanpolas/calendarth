@@ -1,8 +1,8 @@
 {
   "name": "calendarth",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Fetch a public Google Calendar using AJAX",
-  "main": "./build/calendarth-module.js",
+  "main": "./src/",
   "scripts": {
     "test": ""
   },

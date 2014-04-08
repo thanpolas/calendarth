@@ -54,7 +54,7 @@ The returned Object is the raw Data Object as passed from the Google Calendar Ap
 
 ## Release History
 
-- **v0.0.2**, *9 Apr 2014*
+- **v0.0.3**, *9 Apr 2014*
     - Published to NPM.
     - Now exposes a modular build too.
 - **v0.0.1**, *8 Apr 2014*
