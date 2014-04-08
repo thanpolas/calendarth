@@ -39,7 +39,6 @@ module.exports = function (grunt) {
       server: {
         options: {
           open: 'http://localhost:9001/test',
-          keepalive: true,
         }
       },
       test: {
@@ -49,11 +48,13 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      source: {
+      devel: {
         files: [
           'src/**/*.js',
+          'test/**/*.js',
+          'test/index.html',
         ],
-        tasks: ['browserify'],
+        tasks: ['build'],
       },
 
     },
@@ -124,6 +125,12 @@ module.exports = function (grunt) {
   grunt.registerTask('build', 'Build SDK app', [
     'browserify:dist',
     'uglify:dist',
+  ]);
+
+  grunt.registerTask('devel', 'Launches a webserver, watches and auto-builds', [
+    'build',
+    'connect:server',
+    'watch:devel',
   ]);
 
 
