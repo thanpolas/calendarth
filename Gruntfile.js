@@ -106,7 +106,22 @@ module.exports = function (grunt) {
         }
       }
     },
-
+    release: {
+      options: {
+        bump: true, //default: true
+        file: 'bower.json', //default: bower.json
+        add: true, //default: true
+        commit: true, //default: true
+        tag: true, //default: true
+        push: true, //default: true
+        pushTags: true, //default: true
+        npm: false, //default: true
+        npmTag: false,
+        tagName: 'v<%= version %>', //default: '<%= version %>'
+        commitMessage: 'releasing v<%= version %>', //default: 'release <%= version %>'
+        tagMessage: 'v<%= version %>' //default: 'Version <%= version %>'
+      }
+    },
   }); // end grunt.initConfig();
 
   //
