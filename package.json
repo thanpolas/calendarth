@@ -14,6 +14,21 @@
   "engines": {
     "node": "0.10.x"
   },
+  "homepage": "https://github.com/thanpolas/calendarth",
+  "bugs": "https://github.com/thanpolas/calendarth/issues",
+  "author": {
+    "name": "Thanasis Polychronakis",
+    "email": "thanpolas@gmail.com",
+    "url": "https://github.com/thanpolas"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "scripts": {
+    "test": ""
+  },
   "browserify-shim": {
   },
   "dependencies": {
