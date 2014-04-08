@@ -49,6 +49,9 @@ module.exports = function (grunt) {
     },
     watch: {
       devel: {
+        options: {
+          livereload: true,
+        },
         files: [
           'src/**/*.js',
           'test/**/*.js',
@@ -134,5 +137,5 @@ module.exports = function (grunt) {
   ]);
 
 
-  grunt.registerTask('default', ['testlocal']);
+  grunt.registerTask('default', ['devel']);
 };
