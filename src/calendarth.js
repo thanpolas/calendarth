@@ -26,6 +26,7 @@ var Calendarth = module.exports = function(apiKey, calendarId) {
  * Fetch Calendar items.
  *
  * @param {Function(Error, Array.<Calendarth.Item>)} cb Node style callback.
+ * @see https://github.com/thanpolas/calendarth/wiki/Google_Calendar_Object_v3
  */
 Calendarth.prototype.fetch = function(cb) {
   var calendarUrl = 'https://www.googleapis.com/calendar/v3/calendars/';

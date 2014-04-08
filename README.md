@@ -6,7 +6,7 @@ A helper library that fetches and parses a public Google Calendar using the [Goo
 
 > This package requires jQuery to exist in the global namespace as `$`, hopefully future versions will decouple this dependency, pull requests welcome.
 
-[google api v3]: https://developers.google.com/google-apps/calendar/ "Google Calendar API v3"
+[google api v3]: https://developers.google.com/google-apps/calendar/v3/reference/events/list "Google Calendar API v3"
 
 ## Install
 
