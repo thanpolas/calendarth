@@ -15,11 +15,16 @@ var Item = require('./item');
 /**
  * The base class.
  *
+ * @param {Object} options A dict with options to configure the Calendarth:
+ *    @param {string} calendarId REQUIRED the calendar Id, looks like:
+ *        djasldj23ljd23dj23ldj2%40group.calendar.google.com
+ *    @param {string} apiKey A google API v3 key.
  * @constructor
  */
-var Calendarth = module.exports = function(apiKey, calendarId) {
-  this.apiKey = apiKey;
-  this.calendarId = calendarId;
+var Calendarth = module.exports = function(options) {
+  this.options = options || {};
+  this.apiKey = this.options.apiKey || null;
+  this.calendarId = this.options.calendarId || null;
 };
 
 /**
