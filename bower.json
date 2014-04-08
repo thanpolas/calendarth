@@ -5,9 +5,9 @@
     "test/",
     "temp/"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "qunit": "~1.14.0"
+    "qunit": "~1.14.0",
+    "jquery": "~2.1.0"
   }
 }
