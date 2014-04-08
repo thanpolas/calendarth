@@ -62,21 +62,28 @@ module.exports = function (grunt) {
 
     },
     browserify: {
-      dist: {
-        files: {
-          'build/calendarth.js': ['src/index.js'],
-        },
+      global: {
         options: {
           bundleOptions: {
             standalone: 'calendarth',
           },
         },
-      }
+        files: {
+          'build/calendarth.js': ['src/index.js'],
+        },
+      },
+      module: {
+        files: {
+          'build/calendarth-module.js': ['src/index.js'],
+        },
+      },
+
     },
     uglify: {
       dist: {
         files: {
-          'build/calendarth.min.js': ['build/calendarth.js']
+          'build/calendarth.min.js': ['build/calendarth.js'],
+          'build/calendarth.mod.js': ['build/calendarth-module.js'],
         }
       }
     },
@@ -141,7 +148,8 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', 'Build SDK app', [
-    'browserify:dist',
+    'browserify:global',
+    'browserify:module',
     'uglify:dist',
   ]);
 

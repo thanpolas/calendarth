@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "calendarth",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Fetch a public Google Calendar using AJAX",
   "main": "./src",
   "scripts": {
