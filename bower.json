@@ -1,0 +1,13 @@
+{
+  "name": "calendarth",
+  "version": "0.0.0",
+  "ignore": [
+    "test/",
+    "temp/"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "qunit": "~1.14.0"
+  }
+}

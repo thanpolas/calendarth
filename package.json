@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "calendarth",
+  "version": "0.0.0",
+  "description": "Fetch a public Google Calendar using AJAX",
+  "main": "./src",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:thanpolas/calendarth.git"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "browserify-shim": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-qunit": "~0.4.0",
+    "grunt-browserify": "^2.0.1",
+    "grunt-saucelabs": "^5.1.0"
+  }
+}

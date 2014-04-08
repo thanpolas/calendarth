@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Calendarth unit tests</title>
+  <link rel="stylesheet" href="/components/qunit/qunit/qunit.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+
+  <script src="/components/qunit/qunit/qunit.js"></script>
+  <script src="./qunit-setup.js"></script>
+  <script>
+  </script>
+
+   <script type="text/javascript">
+   (function(){
+      if(QUnit.urlParams.compiled) {
+        document.write("<script src='..\/build\/calendarth.min.js'><\/script>");
+      } else {
+        document.write("<script src='..\/build\/calendarth.js'><\/script>");
+      }
+    })();
+  </script>
+  <script type="text/javascript">
+    var __platform = {
+      platform: 'UNKNOWN',
+      version: 'null'
+    };
+
+    asyncTest('Check for SauceLabs', function() {
+      expect(0);
+      if (window.browser && typeof browser.getCapabilities === 'function') {
+        browser.getCapabilities().then(function(cap){
+          __platform = cap;
+          start();
+        });
+      } else {
+        start();
+      }
+    });
+
+    asyncTest(__platform.platform + ' :: ' + __platform.version + ' :: ', function() {
+      expect(1);
+      ok(true, 'It works!');
+      });
+    });
+
+  </script>
+  <script src="bdd/main.test.js"></script>
+</body>
+</html>
