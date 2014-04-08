@@ -29,18 +29,17 @@ module.exports = function (grunt) {
   ];
 
   grunt.initConfig({
-    credentials: grunt.file.readJSON('./credentials.json'),
+    // credentials: grunt.file.readJSON('./credentials.json'),
     connect: {
       options: {
         port: 9001,
         base: './',
-        open: true,
-        // keepalive: true,
         livereload: true,
       },
       server: {
         options: {
-          open: true,
+          open: 'http://localhost:9001/test',
+          keepalive: true,
         }
       },
       test: {

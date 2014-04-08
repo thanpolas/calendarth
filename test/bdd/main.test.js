@@ -5,8 +5,8 @@ module('Surface Tests');
 
 test('The SDK is properly exposed', function() {
   expect(2);
-  ok(!!window.calendarth, 'SDK is properly exposed');
-  ok(typeof window.calendarth === 'function', 'SDK export is a function');
+  ok(!!window.calendarth, 'API is properly exposed');
+  ok(typeof window.calendarth === 'function', 'API export is a function');
 });
 
 test('SDK Exports proper methods and properties', function() {
