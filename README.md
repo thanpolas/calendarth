@@ -16,7 +16,7 @@ bower install calendarth --save
 
 ## Documentation
 
-For now you can access Calendarth using the globally available variable `calendarth`. Get a new Calendarth instance by invoking the global:
+You can access Calendarth using the globally available variable `calendarth` or as a browserify module. Here's how you can get a new Calendarth instance by invoking the global:
 
 ```js
 var calendarth = window.calendarth({
@@ -24,6 +24,8 @@ var calendarth = window.calendarth({
   appId: 'xxx',
 });
 ```
+
+> Look into the `build/` folder for available modular and global exposing builds.
 
 ### Calendarth Options
 
