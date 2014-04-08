@@ -38,6 +38,10 @@ Calendarth.prototype.fetch = function(cb) {
   calendarUrl += this.calendarId + '/events?key=';
   calendarUrl += this.apiKey;
 
+  var dt = new Date();
+  calendarUrl += '&orderBy=startTime';
+  calendarUrl += '&singleEvents=true';
+  calendarUrl += '&timeMin=' + dt.toISOString();
   $.ajax({
     type: 'GET',
     url: calendarUrl,
