@@ -63,18 +63,11 @@ Calendarth.prototype.fetch = function(cb) {
  * @param {Object} eventItem The event data object.
  * @return {string} The event link to use in the anchor element.
  */
-Calendarth.prototype.getEventLink = function(eventItem) {
-  var out = 'http://www.google.com/calendar/event?action=TEMPLATE&text=';
-  out += encodeURIComponent(eventItem.summary);
-  out += '&dates=';
-  out += encodeURIComponent(eventItem.start.dateTime ?
-    eventItem.start.dateTime : eventItem.start.date);
-  out += '/';
-  out += encodeURIComponent(eventItem.end.dateTime ?
-    eventItem.end.dateTime : eventItem.end.date);
-  out += '&details=';
-  out += encodeURIComponent(eventItem.description);
-  out += '&location=';
-  out += encodeURIComponent(eventItem.location);
-  out += '&trp=false&sprop=name:';
+Calendarth.prototype.getEventUrl = function(eventItem) {
+  var linkParts = eventItem.htmlLink.split('=');
+  var out = 'http://www.google.com/calendar/event?action=TEMPLATE&tmeid=';
+  out += linkParts[1];
+  out += '&tmsrc=';
+  out += encodeURIComponent(eventItem.organizer.email);
+  return out;
 };
