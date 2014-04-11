@@ -52,8 +52,26 @@ cal.fetch(function(err, calendarObj) {
 
 The returned Object is the raw Data Object as passed from the Google Calendar Api v3, you can [view a beautified object in this wiki page](https://github.com/thanpolas/calendarth/wiki/Google_Calendar_Object_v3).
 
+#### calendarth.getEventLink(eventItem)
+
+Will return a url that can be used to add the event to a user's Google Calendar.
+
+```js
+cal.fetch(function(err, calendarObj) {
+  err === null; // true
+
+  // get the first event item
+  var eventItem = calendarObj.item.shift();
+
+  var addEventToCal = cal.getEventLink(eventItem);
+  console.log(addEventToCal);
+});
+```
+
 ## Release History
 
+- **v0.0.4**, *12 Apr 2014*
+    - Add getEventLink() feature.
 - **v0.0.3**, *9 Apr 2014*
     - Published to NPM.
     - Now exposes a modular build too.
