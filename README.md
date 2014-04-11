@@ -70,7 +70,7 @@ cal.fetch(function(err, calendarObj) {
 
 ## Release History
 
-- **v0.0.4**, *12 Apr 2014*
+- **v0.0.5**, *12 Apr 2014*
     - Add getEventLink() feature.
 - **v0.0.3**, *9 Apr 2014*
     - Published to NPM.
