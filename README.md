@@ -32,7 +32,7 @@ var calendarth = window.calendarth({
 When initializing a new Calendarth Object you may pass the following options:
 
 * `calendarId` **Type**: `string` **required** The Calendar's Id, looks like this: `djasldj23ljd23dj23ldj2%40group.calendar.google.com`
-* `appId` **Type**: `string` **required** The Google API app id.
+* `appId` **Type**: `string` **required** The Google API app id, [get one from here](https://console.developers.google.com/project).
 * `maxResults` **Type**: `number` *Default*: 20 Maximum results to fetch.
 
 ### Calendarth Methods
